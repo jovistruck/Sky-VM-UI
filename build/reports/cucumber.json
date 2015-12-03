@@ -1,0 +1,207 @@
+[
+  {
+    "line": 4,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 24526880233,
+              "status": "passed"
+            },
+            "match": {
+              "location": "GenericSteps.before_test_actions()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1010774170,
+              "status": "passed"
+            },
+            "match": {
+              "location": "GenericSteps.before()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Check the header navigation links",
+        "description": "",
+        "id": "page-navigation-spec;check-the-header-navigation-links",
+        "after": [
+          {
+            "result": {
+              "duration": 409822,
+              "status": "passed"
+            },
+            "match": {
+              "location": "GenericSteps.embedScreenshotOnFail(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3303674377,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I go to the Home page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Home",
+                  "offset": 12
+                }
+              ],
+              "location": "GenericSteps.i_go_to_page(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 24627541,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the browser is at the Home page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Home",
+                  "offset": 22
+                }
+              ],
+              "location": "GenericSteps.the_browser_is_at_the_page(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1795022066,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I click on the Campaigns link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Campaigns",
+                  "offset": 15
+                }
+              ],
+              "location": "GenericSteps.i_click_on_the_link(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 242856440,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the browser is at the List Campaigns page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "List Campaigns",
+                  "offset": 22
+                }
+              ],
+              "location": "GenericSteps.the_browser_is_at_the_page(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1716419796,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I click on the Create Campaign link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Create Campaign",
+                  "offset": 15
+                }
+              ],
+              "location": "GenericSteps.i_click_on_the_link(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 249786106,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the browser is at the Create Campaign page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Create Campaign",
+                  "offset": 22
+                }
+              ],
+              "location": "GenericSteps.the_browser_is_at_the_page(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 392082520,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I click on the Search Vouchers link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Search Vouchers",
+                  "offset": 15
+                }
+              ],
+              "location": "GenericSteps.i_click_on_the_link(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16859747,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the browser is at the Search Vouchers page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Search Vouchers",
+                  "offset": 22
+                }
+              ],
+              "location": "GenericSteps.the_browser_is_at_the_page(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Page navigation spec",
+    "description": "",
+    "id": "page-navigation-spec",
+    "keyword": "Feature",
+    "uri": "features/pageNavigation.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@UI"
+      },
+      {
+        "line": 2,
+        "name": "@UIPAGENAVIGATION"
+      }
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="&quot;hello&quot;);&lt;/script&gt; | Create Failed secondaryOfferId must be alphanumeric |" tests="6" skipped="0" failures="0" errors="0" timestamp="2015-07-28T13:23:54" hostname="jov-HP-Z220-CMT-Workstation" time="4.414">
+  <properties/>
+  <testcase name="Given I go to the Home page(| campName | campDesc | &lt;script&gt;alert" classname="&quot;hello&quot;);&lt;/script&gt; | Create Failed secondaryOfferId must be alphanumeric |" time="0.001"/>
+  <testcase name="And I click on the Create Campaign link(| campName | campDesc | &lt;script&gt;alert" classname="&quot;hello&quot;);&lt;/script&gt; | Create Failed secondaryOfferId must be alphanumeric |" time="0.0"/>
+  <testcase name="And I select &quot;Promo Code&quot; from campaignType(| campName | campDesc | &lt;script&gt;alert" classname="&quot;hello&quot;);&lt;/script&gt; | Create Failed secondaryOfferId must be alphanumeric |" time="0.0"/>
+  <testcase name="And I enter the values(| campName | campDesc | &lt;script&gt;alert" classname="&quot;hello&quot;);&lt;/script&gt; | Create Failed secondaryOfferId must be alphanumeric |" time="0.0"/>
+  <testcase name="Then I click the Create Campaign button(| campName | campDesc | &lt;script&gt;alert" classname="&quot;hello&quot;);&lt;/script&gt; | Create Failed secondaryOfferId must be alphanumeric |" time="0.0"/>
+  <testcase name="And the error &quot;Create Failed secondaryOfferId must be alphanumeric&quot; is displayed on the page(| campName | campDesc | &lt;script&gt;alert" classname="&quot;hello&quot;);&lt;/script&gt; | Create Failed secondaryOfferId must be alphanumeric |" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

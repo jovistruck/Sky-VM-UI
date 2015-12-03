@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="local base)" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-07-07T10:27:57" hostname="jov-HP-Z220-CMT-Workstation" time="0.0">
+  <properties/>
+  <testcase name="When I do a rest post to &quot;voucher/promocode&quot; with(Scenario: Using a API call " classname="local base)" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

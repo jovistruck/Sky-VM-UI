@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="happy path)" tests="10" skipped="0" failures="0" errors="0" timestamp="2015-07-07T10:26:37" hostname="jov-HP-Z220-CMT-Workstation" time="4.499">
+  <properties/>
+  <testcase name="Given I create the campaign(Scenario: Generate single voucher on SUNT campaigns " classname="happy path)" time="0.0"/>
+  <testcase name="And I go to the List Campaigns page(Scenario: Generate single voucher on SUNT campaigns " classname="happy path)" time="0.0"/>
+  <testcase name="Then the browser is at the List Campaigns page(Scenario: Generate single voucher on SUNT campaigns " classname="happy path)" time="0.0"/>
+  <testcase name="And I click on the campaign we just created(Scenario: Generate single voucher on SUNT campaigns " classname="happy path)" time="0.0"/>
+  <testcase name="And I click on the Show Create Vouchers link(Scenario: Generate single voucher on SUNT campaigns " classname="happy path)" time="0.0"/>
+  <testcase name="When I enter the values(Scenario: Generate single voucher on SUNT campaigns " classname="happy path)" time="0.0"/>
+  <testcase name="And I click the Create Voucher button(Scenario: Generate single voucher on SUNT campaigns " classname="happy path)" time="0.0"/>
+  <testcase name="Then the text &quot;Created Voucher&quot; is displayed on the page(Scenario: Generate single voucher on SUNT campaigns " classname="happy path)" time="0.0"/>
+  <testcase name="And I wait for the campaign batches to change state from PENDING(Scenario: Generate single voucher on SUNT campaigns " classname="happy path)" time="0.0"/>
+  <testcase name="Then the table has the following headers with corresponding first row values(Scenario: Generate single voucher on SUNT campaigns " classname="happy path)" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

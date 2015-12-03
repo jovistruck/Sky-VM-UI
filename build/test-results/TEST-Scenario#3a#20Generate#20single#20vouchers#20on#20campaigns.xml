@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Scenario: Generate single vouchers on campaigns" tests="9" skipped="0" failures="0" errors="0" timestamp="2015-06-05T14:36:12" hostname="jov-HP-Z220-CMT-Workstation" time="6.859">
+  <properties/>
+  <testcase name="Given I create the campaign" classname="Scenario: Generate single vouchers on campaigns" time="0.001"/>
+  <testcase name="And I go to the List Campaigns page" classname="Scenario: Generate single vouchers on campaigns" time="0.0"/>
+  <testcase name="Then the browser is at the List Campaigns page" classname="Scenario: Generate single vouchers on campaigns" time="0.001"/>
+  <testcase name="And I wait for &quot;500&quot; milliseconds" classname="Scenario: Generate single vouchers on campaigns" time="0.001"/>
+  <testcase name="And I click on the campaign we just created" classname="Scenario: Generate single vouchers on campaigns" time="0.0"/>
+  <testcase name="And I click on the Show Create Vouchers link" classname="Scenario: Generate single vouchers on campaigns" time="0.0"/>
+  <testcase name="When I enter the values" classname="Scenario: Generate single vouchers on campaigns" time="0.0"/>
+  <testcase name="And I click the Create Voucher button" classname="Scenario: Generate single vouchers on campaigns" time="0.0"/>
+  <testcase name="classMethod" classname="Scenario: Generate single vouchers on campaigns" time="9.774"/>
+  <system-out><![CDATA[15:36:09.338 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'com.nowtv.pav.test.steps.GenericSteps'
+15:36:10.303 [Forwarding newSession on session null to remote] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: best-match
+15:36:10.313 [Forwarding newSession on session null to remote] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+15:36:10.315 [Forwarding newSession on session null to remote] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://localhost:26961][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
+15:36:10.331 [Forwarding newSession on session null to remote] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://localhost:26961][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+15:36:10.335 [Forwarding newSession on session null to remote] DEBUG o.a.h.impl.execchain.MainClientExec - Opening connection {}->http://localhost:26961
+15:36:10.337 [Forwarding newSession on session null to remote] DEBUG o.a.h.i.c.HttpClientConnectionOperator - Connecting to localhost/127.0.0.1:26961
+15:36:10.337 [Forwarding newSession on session null to remote] DEBUG o.a.h.i.c.HttpClientConnectionOperator - Connection established 127.0.0.1:36237<->127.0.0.1:26961
+15:36:10.338 [Forwarding newSession on session null to remote] DEBUG o.a.h.impl.execchain.MainClientExec - Executing request POST /session HTTP/1.1
+15:36:10.338 [Forwarding newSession on session null to remote] DEBUG o.a.h.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+15:36:10.339 [Forwarding newSession on session null to remote] DEBUG o.a.h.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+15:36:10.340 [Forwarding newSession on session null to remote] DEBUG org.apache.http.headers - http-outgoing-0 >> POST /session HTTP/1.1
+15:36:10.340 [Forwarding newSession on session null to remote] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Type: application/json; charset=utf-8
+15:36:10.340 [Forwarding newSession on session null to remote] DEBUG org.apache.http.headers - http-outgoing-0 >> Content-Length: 143
+15:36:10.340 [Forwarding newSession on session null to remote] DEBUG org.apache.http.headers - http-outgoing-0 >> Host: localhost:26961
+15:36:10.340 [Forwarding newSession on session null to remote] DEBUG org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+15:36:10.340 [Forwarding newSession on session null to remote] DEBUG org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.4 (java 1.5)
+15:36:10.341 [Forwarding newSession on session null to remote] DEBUG org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+15:36:10.341 [Forwarding newSession on session null to remote] DEBUG org.apache.http.wire - http-outgoing-0 >> "POST /session HTTP/1.1[\r][\n]"
+15:36:10.341 [Forwarding newSession on session null to remote] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+15:36:10.341 [Forwarding newSession on session null to remote] DEBUG org.apache.http.wire - http-outgoing-0 >> "Content-Length: 143[\r][\n]"
+15:36:10.342 [Forwarding newSession on session null to remote] DEBUG org.apache.http.wire - http-outgoing-0 >> "Host: localhost:26961[\r][\n]"
+15:36:10.342 [Forwarding newSession on session null to remote] DEBUG org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+15:36:10.342 [Forwarding newSession on session null to remote] DEBUG org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.3.4 (java 1.5)[\r][\n]"
+15:36:10.342 [Forwarding newSession on session null to remote] DEBUG org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+15:36:10.342 [Forwarding newSession on session null to remote] DEBUG org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+15:36:10.342 [Forwarding newSession on session null to remote] DEBUG org.apache.http.wire - http-outgoing-0 >> "{"desiredCapabilities":{"chrome.switches":[],"browserName":"chrome","chromeOptions":{"args":[],"extensions":[]},"version":"","platform":"ANY"}}"
+15:36:11.015 [Forwarding newSession on session null to remote] DEBUG org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+15:36:11.015 [Forwarding newSession on session null to remote] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Length:550[\r][\n]"
+15:36:11.015 [Forwarding newSession on session null to remote] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Type:application/json; charset=utf-8[\r][\n]"
+15:36:11.016 [Forwarding newSession on session null to remote] DEBUG org.apache.http.wire - http-outgoing-0 << "Connection:close[\r][\n]"
+15:36:11.016 [Forwarding newSession on session null to remote] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+15:36:11.016 [Forwarding newSession on session null to remote] DEBUG org.apache.http.wire - http-outgoing-0 << "{"sessionId":"ccb7936f30ba53e4ae3033ee8a0132bf","status":0,"value":{"acceptSslCerts":true,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"browserName":"chrome","chrome":{"userDataDir":"/tmp/.com.google.Chrome.3bC0v8"},"cssSelectorsEnabled":true,"databaseEnabled":false,"handlesAlerts":true,"javascriptEnabled":true,"locationContextEnabled":true,"mobileEmulationEnabled":false,"nativeEvents":true,"platform":"Linux","rotatable":false,"takesHeapSnapshot":true,"takesScreenshot":true,"version":"43.0.2357.81","webStorageEnabled":true}}"
+15:36:11.019 [Forwarding newSession on session null to remote] DEBUG org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 OK
+15:36:11.019 [Forwarding newSession on session null to remote] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Length:550
+15:36:11.019 [Forwarding newSession on session null to remote] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Type:application/json; charset=utf-8
+15:36:11.019 [Forwarding newSession on session null to remote] DEBUG org.apache.http.headers - http-outgoing-0 << Connection:close
+15:36:11.025 [Forwarding newSession on session null to remote] DEBUG o.a.h.i.c.DefaultManagedHttpClientConnection - http-outgoing-0: Shutdown connection
+15:36:11.026 [Forwarding newSession on session null to remote] DEBUG o.a.h.impl.execchain.MainClientExec - Connection discarded
+15:36:11.026 [Forwarding newSession on session null to remote] DEBUG o.a.h.i.c.DefaultManagedHttpClientConnection - http-outgoing-0: Close connection
+15:36:11.026 [Forwarding newSession on session null to remote] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://localhost:26961][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
+15:36:11.032 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: best-match
+15:36:11.033 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+15:36:11.033 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://localhost:26961][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
+15:36:11.033 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Connection leased: [id: 1][route: {}->http://localhost:26961][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+15:36:11.033 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG o.a.h.impl.execchain.MainClientExec - Opening connection {}->http://localhost:26961
+15:36:11.033 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG o.a.h.i.c.HttpClientConnectionOperator - Connecting to localhost/127.0.0.1:26961
+15:36:11.034 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG o.a.h.i.c.HttpClientConnectionOperator - Connection established 127.0.0.1:36247<->127.0.0.1:26961
+15:36:11.034 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG o.a.h.impl.execchain.MainClientExec - Executing request POST /session/ccb7936f30ba53e4ae3033ee8a0132bf/url HTTP/1.1
+15:36:11.034 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG o.a.h.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+15:36:11.034 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG o.a.h.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+15:36:11.034 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.headers - http-outgoing-1 >> POST /session/ccb7936f30ba53e4ae3033ee8a0132bf/url HTTP/1.1
+15:36:11.034 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Type: application/json; charset=utf-8
+15:36:11.034 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Length: 51
+15:36:11.034 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.headers - http-outgoing-1 >> Host: localhost:26961
+15:36:11.034 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.headers - http-outgoing-1 >> Connection: Keep-Alive
+15:36:11.034 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.headers - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.3.4 (java 1.5)
+15:36:11.035 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.headers - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+15:36:11.035 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.wire - http-outgoing-1 >> "POST /session/ccb7936f30ba53e4ae3033ee8a0132bf/url HTTP/1.1[\r][\n]"
+15:36:11.035 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+15:36:11.035 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Length: 51[\r][\n]"
+15:36:11.035 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.wire - http-outgoing-1 >> "Host: localhost:26961[\r][\n]"
+15:36:11.035 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.wire - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+15:36:11.035 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.wire - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.3.4 (java 1.5)[\r][\n]"
+15:36:11.035 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.wire - http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+15:36:11.035 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.wire - http-outgoing-1 >> "[\r][\n]"
+15:36:11.036 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.wire - http-outgoing-1 >> "{"url":"http://admin:pass@localhost:8080/campaign"}"
+15:36:11.722 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.wire - http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+15:36:11.722 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Length:72[\r][\n]"
+15:36:11.722 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Type:application/json; charset=utf-8[\r][\n]"
+15:36:11.722 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.wire - http-outgoing-1 << "Connection:close[\r][\n]"
+15:36:11.723 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.wire - http-outgoing-1 << "[\r][\n]"
+15:36:11.723 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.wire - http-outgoing-1 << "{"sessionId":"ccb7936f30ba53e4ae3033ee8a0132bf","status":0,"value":null}"
+15:36:11.723 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.headers - http-outgoing-1 << HTTP/1.1 200 OK
+15:36:11.723 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Length:72
+15:36:11.723 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Type:application/json; charset=utf-8
+15:36:11.723 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG org.apache.http.headers - http-outgoing-1 << Connection:close
+15:36:11.723 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG o.a.h.i.c.DefaultManagedHttpClientConnection - http-outgoing-1: Shutdown connection
+15:36:11.723 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG o.a.h.impl.execchain.MainClientExec - Connection discarded
+15:36:11.723 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG o.a.h.i.c.DefaultManagedHttpClientConnection - http-outgoing-1: Close connection
+15:36:11.723 [Forwarding get on session ccb7936f30ba53e4ae3033ee8a0132bf to remote] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Connection released: [id: 1][route: {}->http://localhost:26961][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
+15:36:11.750 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'com.nowtv.pav.test.steps.GenericSteps'
+15:36:11.789 [Test worker] DEBUG o.a.h.i.c.PoolingClientConnectionManager - Connection request: [route: {}->http://localhost:8080][total kept alive: 0; route allocated: 0 of 100; total allocated: 0 of 200]
+15:36:11.794 [Test worker] DEBUG o.a.h.i.c.PoolingClientConnectionManager - Connection leased: [id: 0][route: {}->http://localhost:8080][total kept alive: 0; route allocated: 1 of 100; total allocated: 1 of 200]
+15:36:11.796 [Test worker] DEBUG o.a.h.i.c.DefaultClientConnectionOperator - Connecting to localhost:8080
+15:36:11.812 [Test worker] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: best-match
+15:36:11.813 [Test worker] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+15:36:11.814 [Test worker] DEBUG o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+15:36:11.817 [Test worker] DEBUG o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+15:36:11.817 [Test worker] DEBUG o.a.h.impl.client.DefaultHttpClient - Attempt 1 to execute request
+15:36:11.817 [Test worker] DEBUG o.a.h.i.conn.DefaultClientConnection - Sending request: POST /campaign HTTP/1.1
+15:36:11.818 [Test worker] DEBUG org.apache.http.wire -  >> "POST /campaign HTTP/1.1[\r][\n]"
+15:36:11.818 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Type: application/json[\r][\n]"
+15:36:11.818 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Length: 246[\r][\n]"
+15:36:11.818 [Test worker] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
+15:36:11.819 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+15:36:11.819 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.3.4 (java 1.5)[\r][\n]"
+15:36:11.819 [Test worker] DEBUG org.apache.http.wire -  >> "Authorization: Basic YWRtaW46cGFzcw==[\r][\n]"
+15:36:11.819 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+15:36:11.819 [Test worker] DEBUG org.apache.http.headers - >> POST /campaign HTTP/1.1
+15:36:11.820 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: application/json
+15:36:11.820 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 246
+15:36:11.820 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
+15:36:11.820 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+15:36:11.820 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.3.4 (java 1.5)
+15:36:11.820 [Test worker] DEBUG org.apache.http.headers - >> Authorization: Basic YWRtaW46cGFzcw==
+15:36:11.820 [Test worker] DEBUG org.apache.http.wire -  >> "{[\n]"
+15:36:11.821 [Test worker] DEBUG org.apache.http.wire -  >> "[0x9]"type":"SINGLE_USE_NON_TRANSFERABLE",[\n]"
+15:36:11.821 [Test worker] DEBUG org.apache.http.wire -  >> "   "name":"Campaign 2",[\n]"
+15:36:11.821 [Test worker] DEBUG org.apache.http.wire -  >> "   "prefix":"NOW",[\n]"
+15:36:11.821 [Test worker] DEBUG org.apache.http.wire -  >> "   "cancelled":false,[\n]"
+15:36:11.821 [Test worker] DEBUG org.apache.http.wire -  >> "   "pomOfferId":"12346",[\n]"
+15:36:11.821 [Test worker] DEBUG org.apache.http.wire -  >> "   "secondaryOfferId":"abc123",[\n]"
+15:36:11.821 [Test worker] DEBUG org.apache.http.wire -  >> "   "start":"2014-06-26T00:00:00Z",[\n]"
+15:36:11.822 [Test worker] DEBUG org.apache.http.wire -  >> "   "end":"2016-06-26T00:00:00Z",[\n]"
+15:36:11.822 [Test worker] DEBUG org.apache.http.wire -  >> "   "cap":"20"[\n]"
+15:36:11.822 [Test worker] DEBUG org.apache.http.wire -  >> "}"
+15:36:11.938 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 201 Created[\r][\n]"
+15:36:11.938 [Test worker] DEBUG org.apache.http.wire -  << "Server: Apache-Coyote/1.1[\r][\n]"
+15:36:11.938 [Test worker] DEBUG org.apache.http.wire -  << "Access-Control-Allow-Credentials: true[\r][\n]"
+15:36:11.938 [Test worker] DEBUG org.apache.http.wire -  << "X-Content-Type-Options: nosniff[\r][\n]"
+15:36:11.938 [Test worker] DEBUG org.apache.http.wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+15:36:11.938 [Test worker] DEBUG org.apache.http.wire -  << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+15:36:11.938 [Test worker] DEBUG org.apache.http.wire -  << "Pragma: no-cache[\r][\n]"
+15:36:11.938 [Test worker] DEBUG org.apache.http.wire -  << "Expires: 0[\r][\n]"
+15:36:11.939 [Test worker] DEBUG org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]"
+15:36:11.939 [Test worker] DEBUG org.apache.http.wire -  << "X-Application-Context: application:development[\r][\n]"
+15:36:11.939 [Test worker] DEBUG org.apache.http.wire -  << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+15:36:11.939 [Test worker] DEBUG org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]"
+15:36:11.939 [Test worker] DEBUG org.apache.http.wire -  << "Date: Fri, 05 Jun 2015 14:36:11 GMT[\r][\n]"
+15:36:11.939 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+15:36:11.939 [Test worker] DEBUG o.a.h.i.conn.DefaultClientConnection - Receiving response: HTTP/1.1 201 Created
+15:36:11.939 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 201 Created
+15:36:11.939 [Test worker] DEBUG org.apache.http.headers - << Server: Apache-Coyote/1.1
+15:36:11.939 [Test worker] DEBUG org.apache.http.headers - << Access-Control-Allow-Credentials: true
+15:36:11.939 [Test worker] DEBUG org.apache.http.headers - << X-Content-Type-Options: nosniff
+15:36:11.939 [Test worker] DEBUG org.apache.http.headers - << X-XSS-Protection: 1; mode=block
+15:36:11.939 [Test worker] DEBUG org.apache.http.headers - << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+15:36:11.939 [Test worker] DEBUG org.apache.http.headers - << Pragma: no-cache
+15:36:11.939 [Test worker] DEBUG org.apache.http.headers - << Expires: 0
+15:36:11.939 [Test worker] DEBUG org.apache.http.headers - << X-Frame-Options: DENY
+15:36:11.939 [Test worker] DEBUG org.apache.http.headers - << X-Application-Context: application:development
+15:36:11.940 [Test worker] DEBUG org.apache.http.headers - << Content-Type: application/json;charset=UTF-8
+15:36:11.940 [Test worker] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+15:36:11.940 [Test worker] DEBUG org.apache.http.headers - << Date: Fri, 05 Jun 2015 14:36:11 GMT
+15:36:11.942 [Test worker] DEBUG o.a.h.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+15:36:11.949 [Test worker] DEBUG org.apache.http.wire -  << "3c1[\r][\n]"
+15:36:11.950 [Test worker] DEBUG org.apache.http.wire -  << "{"id":417,"type":"SINGLE_USE_NON_TRANSFERABLE","name":"Campaign 2","description":null,"prefix":"NOW","cancelled":false,"pomOfferId":"12346","secondaryOfferId":"abc123","start":"2014-06-26T00:00:00Z","end":"2016-06-26T00:00:00Z","cap":20,"voucherCreationLock":false,"state":null,"updated":"2015-06-05T14:36:11Z","updatedBy":"admin","created":"2015-06-05T14:36:11Z","createdBy":"admin","totalVoucherCount":null,"redeemedCount":0,"campaignState":"ACTIVE","links":[{"rel":"self","href":"http://localhost:8080/campaign/417"},{"rel":"campaign.types","href":"http://localhost:8080/campaign/types"},{"rel":"voucher.batches","href":"http://localhost:8080/campaign/417/voucher-batch"},{"rel":"voucher.create-additional","href":"http://localhost:8080/campaign/417/voucher-batch/casenumber/1/accountId/2?requestedAccountId=2"},{"rel":"campaign.history","href":"http://localhost:8080/campaign/417/history"},{"rel":"campaign.update","href":"http://localhost:8080/campaign"}]}"
+15:36:11.950 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+15:36:11.950 [Test worker] DEBUG org.apache.http.wire -  << "0[\r][\n]"
+15:36:11.950 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+15:36:11.950 [Test worker] DEBUG o.a.h.i.c.PoolingClientConnectionManager - Connection [id: 0][route: {}->http://localhost:8080] can be kept alive indefinitely
+15:36:11.951 [Test worker] DEBUG o.a.h.i.c.PoolingClientConnectionManager - Connection released: [id: 0][route: {}->http://localhost:8080][total kept alive: 1; route allocated: 1 of 100; total allocated: 1 of 200]
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 2.15.322448 (52179c1b310fec1797c81ea9a20326839860b7d3) on port 26961
+Only local connections are allowed.
+]]></system-err>
+</testsuite>

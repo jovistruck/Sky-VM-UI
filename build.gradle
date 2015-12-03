@@ -1,0 +1,205 @@
+buildscript {
+    repositories {
+        maven { url 'http://buildrepo.nowtv.bskyb.com/repo' }
+        jcenter()
+        maven { url "http://repo.spring.io/libs-release" }
+        mavenCentral()
+    }
+}
+
+plugins {
+    id "java"
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    maven { url 'http://buildrepo.nowtv.bskyb.com/repo' }
+    mavenLocal()
+    mavenCentral()
+}
+
+ext.versions = [
+        springboot  : '1.2.0.RELEASE',
+        cucumber    : '1.2.4',
+        fluentlenium: '0.10.2'
+]
+
+dependencies {
+    testCompile "info.cukes:cucumber-java:$versions.cucumber",
+            "info.cukes:cucumber-junit:$versions.cucumber",
+            "com.jayway.restassured:json-path:2.3.2",
+            "org.assertj:assertj-core:3.2.0",
+            "com.nowtv.pav:test-commons:0.1.35.0",
+            "io.generators:generators-core:1.0",
+            'org.ocpsoft.prettytime:prettytime-nlp:3.2.5.Final',
+            'com.jayway.awaitility:awaitility:1.6.3',
+            'com.carrotsearch:hppc:0.6.0',
+            'com.google.guava:guava:17.0',
+            'joda-time:joda-time:2.3',
+            'org.apache.httpcomponents:fluent-hc:4.2.1',
+            'com.googlecode.json-simple:json-simple:1.1',
+            'net.lightbody.bmp:browsermob-core-littleproxy:2.1.0-beta-2'
+
+    testCompile("org.springframework.boot:spring-boot-starter-test:$versions.springboot") {
+        exclude group: 'junit'
+    }
+
+    testCompile 'org.seleniumhq.selenium:selenium-htmlunit-driver:2.43.1',
+            "org.fluentlenium:fluentlenium-core:$versions.fluentlenium",
+            "org.fluentlenium:fluentlenium-assertj:$versions.fluentlenium"
+
+
+}
+
+def String createCucumberOptions() {
+    def tags = System.getProperty("tags")
+    if(System.getProperty("testEnvironment")!=null && System.getProperty("testEnvironment").equalsIgnoreCase("production")) {
+        if(!tags.toUpperCase().equalsIgnoreCase("@PRODUCTIONSAFE"))
+            throw new GradleException("Tags found:" + tags + ". Tests not tagged as @PRODUCTIONSAFE cannot be run on production.")
+    }
+    return tags ? "--tags $tags" : ""
+}
+
+task stopUi(type: Exec) {
+
+    if (testEnvironmentIsLocal()) {
+        println "Environment found to be localhost: Stopping UI"
+        ignoreExitValue = true
+        commandLine 'pkill', 'grunt'
+        standardOutput = new ByteArrayOutputStream()
+        ext.output = {
+            return standardOutput.toString()
+        }
+    } else { //workaround. this else needs removing/fixing
+        ignoreExitValue = true
+        commandLine 'echo', 'stopUi Not Executed'
+        ext.output = {
+            return standardOutput.toString()
+        }
+    }
+}
+
+task stopBackend(type: Exec) {
+
+    if (testEnvironmentIsLocal()) {
+        println "Environment found to be localhost: Stopping Backend"
+        ignoreExitValue = true
+        commandLine 'pkill', '-f', 'bootRun'
+        standardOutput = new ByteArrayOutputStream()
+        ext.output = {
+            return standardOutput.toString()
+        }
+    } else {
+        ignoreExitValue = true
+        commandLine 'echo', 'stopBackend Not Executed'
+        ext.output = {
+            return standardOutput.toString()
+        }
+    }
+}
+
+task startBackend {
+
+    if (testEnvironmentIsLocal()) {
+        println "Environment found to be localhost: Spawning Backend"
+        doFirst {
+
+            ProcessBuilder builder = new ProcessBuilder('./gradlew', 'bootRun')
+            builder.inheritIO();
+            builder.directory(new File(System.getProperty('voucherdir', '../vouchers/')))
+            Process process = builder.start()
+            println "   VM backend process started:" + process.alive
+
+            logProcessOutput(process, "Started Application in")
+            waitForSeverToStart('http://localhost:8080/status')
+        }
+    }
+}
+
+def testEnvironmentIsLocal() {
+    def testEnvironment = System.getProperty("testEnvironment")
+
+    return (testEnvironment == null || testEnvironment.toString().contains("localhost"))
+}
+
+def waitForSeverToStart(String url) {
+    def start = new Date().getTime()
+    def end = start + 60_000
+
+    println "   Waiting for server ($url) startup ..."
+    print "   "
+
+    def responseStatus = 503
+    def message = "No message"
+
+    while (new Date().getTime() < end) {
+
+        try {
+            def connection = (HttpURLConnection) new URL(url).openConnection()
+            connection.addRequestProperty("X-Forwarded-Proto", "https")
+            responseStatus = connection.getResponseCode()
+            message = connection.responseMessage
+            if (responseStatus == 200) {
+                break;
+            } else {
+                print "."
+                Thread.sleep(100)
+            }
+        } catch (Exception ignored) {
+            print "."
+            Thread.sleep(100)
+        }
+    }
+
+
+    if (responseStatus != 200) {
+        throw new AssertionError("Server at $url did not start!")
+    }
+
+    println "Server started at: " + url + " with status:" + message
+}
+
+task startUi() {
+
+    if (testEnvironmentIsLocal()) {
+        println "Environment found to be localhost: Spawning UI"
+        doFirst {
+            ProcessBuilder builder = new ProcessBuilder('grunt', 'serve')
+            builder.redirectErrorStream(true)
+            builder.directory(new File(System.getProperty('voucheruidir', '../vouchers-ui')))
+            Process process = builder.start()
+            println "   VM UI process started:" + process.alive
+
+            logProcessOutput(process, "Started connect web server on")
+            waitForSeverToStart('http://localhost:9000/#/status')
+        }
+    }
+}
+
+private void logProcessOutput(Process process, String terminationLineFragment) {
+    InputStream stdout = process.getInputStream()
+    BufferedReader reader = new BufferedReader(new InputStreamReader(stdout))
+
+    def line
+    while ((line = reader.readLine()) != null) {
+        println line
+        if (line.contains(terminationLineFragment)) {
+            break;
+        }
+    }
+}
+
+task printLinkToTestReports << {
+    println "Cucumber junit reports are outputed to file://$project.buildDir/reports/tests/index.html"
+    println "Cucumber html reports are outputed to file://$project.buildDir/reports/index.html"
+}
+
+test {
+    systemProperties System.getProperties()
+    systemProperty "cucumber.options", createCucumberOptions()
+    outputs.upToDateWhen { false }
+}
+test.dependsOn = [compileTestJava, processTestResources, startBackend, startUi]
+test.finalizedBy([stopUi, stopBackend, printLinkToTestReports])

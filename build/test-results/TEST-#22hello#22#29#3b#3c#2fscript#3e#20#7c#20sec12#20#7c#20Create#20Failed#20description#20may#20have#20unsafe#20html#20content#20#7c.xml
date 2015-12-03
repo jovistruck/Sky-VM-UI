@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="&quot;hello&quot;);&lt;/script&gt; | sec12 | Create Failed description may have unsafe html content |" tests="6" skipped="0" failures="1" errors="0" timestamp="2015-07-28T13:23:18" hostname="jov-HP-Z220-CMT-Workstation" time="34.515">
+  <properties/>
+  <testcase name="Given I go to the Home page(| campName | &lt;script&gt;alert" classname="&quot;hello&quot;);&lt;/script&gt; | sec12 | Create Failed description may have unsafe html content |" time="0.0"/>
+  <testcase name="And I click on the Create Campaign link(| campName | &lt;script&gt;alert" classname="&quot;hello&quot;);&lt;/script&gt; | sec12 | Create Failed description may have unsafe html content |" time="0.0"/>
+  <testcase name="And I select &quot;Promo Code&quot; from campaignType(| campName | &lt;script&gt;alert" classname="&quot;hello&quot;);&lt;/script&gt; | sec12 | Create Failed description may have unsafe html content |" time="0.0"/>
+  <testcase name="And I enter the values(| campName | &lt;script&gt;alert" classname="&quot;hello&quot;);&lt;/script&gt; | sec12 | Create Failed description may have unsafe html content |" time="0.0"/>
+  <testcase name="Then I click the Create Campaign button(| campName | &lt;script&gt;alert" classname="&quot;hello&quot;);&lt;/script&gt; | sec12 | Create Failed description may have unsafe html content |" time="0.0"/>
+  <testcase name="And the error &quot;Create Failed description may have unsafe html content&quot; is displayed on the page(| campName | &lt;script&gt;alert" classname="&quot;hello&quot;);&lt;/script&gt; | sec12 | Create Failed description may have unsafe html content |" time="0.0">
+    <failure message="org.openqa.selenium.TimeoutException: Timed out after 30 seconds: Selector .error is not displayed[text*=&quot;Create Failed description may have unsafe html content&quot;] Filters : &#10;Build info: version: '2.43.1', revision: '5163bceef1bc36d43f3dc0b83c88998168a363a0', time: '2014-09-10 09:43:55'&#10;System info: host: 'jov-HP-Z220-CMT-Workstation', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.19.0-22-generic', java.version: '1.8.0_45'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Timed out after 30 seconds: Selector .error is not displayed[text*=&quot;Create Failed description may have unsafe html content&quot;] Filters : 
+Build info: version: '2.43.1', revision: '5163bceef1bc36d43f3dc0b83c88998168a363a0', time: '2014-09-10 09:43:55'
+System info: host: 'jov-HP-Z220-CMT-Workstation', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.19.0-22-generic', java.version: '1.8.0_45'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:259)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:175)
+	at org.fluentlenium.core.wait.FluentWait.until(FluentWait.java:98)
+	at org.fluentlenium.core.wait.FluentWaitMatcher.until(FluentWaitMatcher.java:67)
+	at org.fluentlenium.core.wait.FluentWaitMatcher.areDisplayed(FluentWaitMatcher.java:216)
+	at com.nowtv.pav.test.steps.GenericSteps.the_page_displays_error_containing_text(GenericSteps.java:241)
+	at ✽.And the error &quot;Create Failed description may have unsafe html content&quot; is displayed on the page(features/createFindAndFilterCampaigns.feature:21)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

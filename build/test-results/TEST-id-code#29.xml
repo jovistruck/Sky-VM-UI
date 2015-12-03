@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="id-code)" tests="4" skipped="0" failures="0" errors="0" timestamp="2015-07-29T09:43:44" hostname="jov-HP-Z220-CMT-Workstation" time="1.14">
+  <properties/>
+  <testcase name="When I create the campaign(Scenario: Search Account ID with SUNT Vouchers and check cross linking" classname="id-code)" time="0.0"/>
+  <testcase name="When I create the campaign(Scenario: Search Account ID with SUNT Vouchers and check cross linking" classname="id-code)" time="0.0"/>
+  <testcase name="When I create the campaign(Scenario: Search Account ID with SUNT Vouchers and check cross linking" classname="id-code)" time="0.0"/>
+  <testcase name="When I create the campaign(Scenario: Search Account ID with SUNT Vouchers and check cross linking" classname="id-code)" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
